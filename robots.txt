@@ -1,0 +1,30 @@
+# robots.txt para RacketComp Pro
+
+User-agent: *
+Allow: /
+
+# Permitir todos los recursos importantes
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.gif$
+Allow: /*.webp$
+Allow: /*.svg$
+
+# Bloquear parámetros de sesión y tracking innecesarios
+Disallow: /*?sessionid=
+Disallow: /*?sid=
+Disallow: /*&sessionid=
+Disallow: /*?utm_source=
+Disallow: /*?utm_medium=
+Disallow: /*?utm_campaign=
+Disallow: /*?fbclid=
+Disallow: /*?gclid=
+
+# Sitemap
+Sitemap: https://carsps.github.io/racketcomp-pro/sitemap.xml
+
+# Crawl-delay (opcional, solo si tienes problemas de servidor)
+# Crawl-delay: 1
