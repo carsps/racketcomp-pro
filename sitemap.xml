@@ -3,7 +3,7 @@
   
   <!-- Página Principal -->
   <url>
-    <loc>https://carsps.github.io/racketcomp-pro/</loc>
+    <loc>https://compararraquetas.com/</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -11,28 +11,28 @@
   
   <!-- Comparaciones Populares (Crea páginas HTML para estas si puedes) -->
   <url>
-    <loc>https://carsps.github.io/racketcomp-pro/?comp=babolat-pure-drive-wilson-blade</loc>
+    <loc>https://compararraquetas.com/</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
-    <loc>https://carsps.github.io/racketcomp-pro/?comp=head-radical-yonex-ezone</loc>
+    <loc>https://compararraquetas.com/?comp=head-radical-yonex-ezone</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
-    <loc>https://carsps.github.io/racketcomp-pro/?comp=wilson-pro-staff-babolat-pure-aero</loc>
+    <loc>https://compararraquetas.com/?comp=wilson-pro-staff-babolat-pure-aero</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
-    <loc>https://carsps.github.io/racketcomp-pro/?comp=head-speed-prince-phantom</loc>
+    <loc>https://compararraquetas.com/?comp=head-speed-prince-phantom</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -40,4 +40,5 @@
   
   <!-- Añade más comparaciones populares aquí -->
   
+
 </urlset>
