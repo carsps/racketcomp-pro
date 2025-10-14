@@ -1,44 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   
-  <!-- Página Principal -->
+  <!-- PÁGINA PRINCIPAL -->
   <url>
     <loc>https://compararraquetas.com/</loc>
-    <lastmod>2025-01-15</lastmod>
+    <lastmod>2025-01-01T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   
-  <!-- Comparaciones Populares (Crea páginas HTML para estas si puedes) -->
+  <!-- COMPARACIONES POPULARES - MUY IMPORTANTE PARA SEO -->
   <url>
-    <loc>https://compararraquetas.com/</loc>
-    <lastmod>2025-01-15</lastmod>
+    <loc>https://compararraquetas.com/comparar/babolat-pure-drive-vs-wilson-blade</loc>
+    <lastmod>2025-01-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://compararraquetas.com/images/babolat-pure-drive.jpg</image:loc>
+      <image:caption>Babolat Pure Drive vs Wilson Blade comparación</image:caption>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://compararraquetas.com/comparar/head-radical-vs-yonex-ezone</loc>
+    <lastmod>2025-01-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
-    <loc>https://compararraquetas.com/?comp=head-radical-yonex-ezone</loc>
-    <lastmod>2025-01-15</lastmod>
+    <loc>https://compararraquetas.com/comparar/wilson-pro-staff-vs-babolat-pure-aero</loc>
+    <lastmod>2025-01-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   
+  <!-- PÁGINAS DE MARCAS -->
   <url>
-    <loc>https://compararraquetas.com/?comp=wilson-pro-staff-babolat-pure-aero</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <url>
-    <loc>https://compararraquetas.com/?comp=head-speed-prince-phantom</loc>
-    <lastmod>2025-01-15</lastmod>
+    <loc>https://compararraquetas.com/marca/babolat</loc>
+    <lastmod>2025-01-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   
-  <!-- Añade más comparaciones populares aquí -->
+  <url>
+    <loc>https://compararraquetas.com/marca/wilson</loc>
+    <lastmod>2025-01-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
   
-
+  <url>
+    <loc>https://compararraquetas.com/marca/head</loc>
+    <lastmod>2025-01-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://compararraquetas.com/marca/yonex</loc>
+    <lastmod>2025-01-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- GUÍAS Y CONTENIDO SEO -->
+  <url>
+    <loc>https://compararraquetas.com/guia/como-elegir-raqueta-tenis</loc>
+    <lastmod>2025-01-01T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://compararraquetas.com/guia/mejores-raquetas-principiantes</loc>
+    <lastmod>2025-01-01T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://compararraquetas.com/guia/mejores-raquetas-intermedios</loc>
+    <lastmod>2025-01-01T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://compararraquetas.com/blog</loc>
+    <lastmod>2025-01-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- PÁGINAS LEGALES -->
+  <url>
+    <loc>https://compararraquetas.com/privacy</loc>
+    <lastmod>2025-01-01T00:00:00+00:00</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
+  <url>
+    <loc>https://compararraquetas.com/terms</loc>
+    <lastmod>2025-01-01T00:00:00+00:00</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
 </urlset>
