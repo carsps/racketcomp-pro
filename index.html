@@ -1265,74 +1265,106 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         }
 
         /* ════════════════════════════════════════════════════════════════
-           PRICE SECTION COMPACTA
+           PRICE SECTION — OPTIMIZADA PARA CONVERSIÓN
         ════════════════════════════════════════════════════════════════ */
         .price-section {
-            background: var(--primary-gradient);
-            color: white;
-            padding: 32px;
+            background: #fff;
+            border: 2px solid #e8ecff;
             border-radius: 25px;
             margin-top: 20px;
-            box-shadow: 0 18px 48px rgba(102, 126, 234, 0.6);
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(102,126,234,0.15);
         }
 
         .price-header {
+            background: var(--primary-gradient);
+            padding: 24px 28px 20px;
             text-align: center;
-            margin-bottom: 22px;
-            padding-bottom: 20px;
-            border-bottom: 2px solid rgba(255, 255, 255, 0.25);
+            color: white;
+        }
+
+        .price-header-title {
+            font-size: 0.95em;
+            font-weight: 700;
+            opacity: 0.9;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
         }
 
         .price-range {
             display: flex;
             justify-content: space-around;
-            margin-bottom: 20px;
-            font-size: 0.95em;
+            align-items: center;
+            gap: 10px;
         }
 
         .price-item {
             text-align: center;
+            flex: 1;
         }
 
         .price-label {
-            opacity: 0.85;
-            font-size: 0.88em;
-            margin-bottom: 6px;
+            opacity: 0.8;
+            font-size: 0.8em;
+            margin-bottom: 4px;
             font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .price-divider {
+            width: 1px;
+            height: 40px;
+            background: rgba(255,255,255,0.3);
+        }
+
+        .price-value-low, .price-value-high {
+            font-size: 1.5em;
+            font-weight: 800;
         }
 
         .current-price {
-            font-size: 2.6em;
+            font-size: 2.8em;
             font-weight: 900;
-            margin-bottom: 10px;
-            text-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
-            animation: priceGlow 2s ease-in-out infinite;
+            line-height: 1;
+            text-shadow: 0 2px 12px rgba(0,0,0,0.3);
         }
 
-        @keyframes priceGlow {
-            0%, 100% { filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.5)); }
-            50% { filter: drop-shadow(0 0 30px rgba(255, 215, 0, 0.8)); }
+        .price-badge {
+            display: inline-block;
+            background: #ffd700;
+            color: #1a1a2e;
+            font-size: 0.75em;
+            font-weight: 800;
+            padding: 3px 10px;
+            border-radius: 50px;
+            margin-top: 5px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .price-disclaimer {
-            font-size: 0.85em;
-            opacity: 0.9;
-            background: rgba(255, 255, 255, 0.18);
-            padding: 8px 16px;
-            border-radius: 10px;
+            font-size: 0.78em;
+            opacity: 0.8;
+            background: rgba(255,255,255,0.15);
+            padding: 6px 14px;
+            border-radius: 8px;
             display: inline-block;
-            margin-top: 10px;
+            margin-top: 12px;
         }
 
         .stores-section {
-            padding-top: 22px;
+            padding: 22px 24px 26px;
         }
 
         .stores-title {
-            font-size: 1.1em;
+            font-size: 0.85em;
             font-weight: 800;
-            margin-bottom: 16px;
-            opacity: 0.95;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 14px;
         }
 
         .store-links {
@@ -1341,53 +1373,128 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             gap: 12px;
         }
 
+        /* ── BOTÓN AMAZON (priority-2) ── */
         .store-link {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            background: rgba(255, 255, 255, 0.18);
-            backdrop-filter: blur(12px);
-            padding: 16px 22px;
+            padding: 16px 20px;
             border-radius: 16px;
             text-decoration: none;
-            color: white;
             font-weight: 700;
             transition: var(--transition-smooth);
-            border: 2px solid rgba(255, 255, 255, 0.25);
             font-size: 1em;
             position: relative;
-        }
-
-        .store-link:hover {
-            background: rgba(255, 255, 255, 0.32);
-            transform: translateX(8px);
-            border-color: rgba(255, 255, 255, 0.55);
-            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.25);
+            overflow: hidden;
         }
 
         .store-link.priority-1 {
-            background: linear-gradient(135deg, rgba(255, 215, 0, 0.35) 0%, rgba(255, 237, 78, 0.35) 100%);
-            border: 2px solid rgba(255, 215, 0, 0.6);
+            background: #f0f4ff;
+            border: 2px solid #667eea;
+            color: #333;
+        }
+        .store-link.priority-1:hover {
+            background: #e0e8ff;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 28px rgba(102,126,234,0.3);
         }
 
         .store-link.priority-2 {
-            background: rgba(102, 126, 234, 0.25);
-            border: 2px solid rgba(102, 126, 234, 0.5);
+            background: linear-gradient(135deg, #FF9900 0%, #FF6600 100%);
+            border: none;
+            color: white;
+            box-shadow: 0 8px 24px rgba(255,153,0,0.45);
+            font-size: 1.1em;
+        }
+        .store-link.priority-2:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 14px 36px rgba(255,153,0,0.6);
+        }
+        .store-link.priority-2::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 60%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            animation: shimmerBtn 2.5s infinite;
+        }
+        @keyframes shimmerBtn {
+            0% { left: -100%; }
+            100% { left: 200%; }
         }
 
         .store-info {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 12px;
         }
 
-        .store-name {
-            font-size: 1.1em;
+        .store-icon-wrap {
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3em;
+            flex-shrink: 0;
+        }
+        .priority-1 .store-icon-wrap {
+            background: rgba(102,126,234,0.12);
+        }
+
+        .store-text { display: flex; flex-direction: column; }
+        .store-name { font-size: 1em; font-weight: 800; line-height: 1.2; }
+        .store-sub  { font-size: 0.78em; opacity: 0.8; font-weight: 500; margin-top: 2px; }
+
+        .store-right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 4px;
         }
 
         .store-price {
-            font-size: 1.4em;
+            font-size: 1.5em;
             font-weight: 900;
+            line-height: 1;
+        }
+
+        .store-cta {
+            font-size: 0.75em;
+            opacity: 0.85;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-weight: 600;
+        }
+
+        .buy-now-btn {
+            display: block;
+            width: 100%;
+            margin-top: 16px;
+            padding: 18px 24px;
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: white;
+            text-align: center;
+            border-radius: 16px;
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 1.15em;
+            letter-spacing: 0.5px;
+            box-shadow: 0 8px 24px rgba(17,153,142,0.45);
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+        }
+        .buy-now-btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 40px rgba(17,153,142,0.6);
+        }
+        .buy-now-btn::after {
+            content: ' →';
         }
 
         /* ════════════════════════════════════════════════════════════════
@@ -2329,18 +2436,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <h4>💰 Dónde Comprar al Mejor Precio</h4>
                         <div class="price-section">
                             <div class="price-header">
+                                <div class="price-header-title">Rango de precios en el mercado</div>
                                 <div class="price-range">
                                     <div class="price-item">
                                         <div class="price-label">Desde</div>
-                                        <div style="font-size: 1.6em; font-weight: 800;" itemprop="lowPrice">${racket.pricing.lowestPrice}</div>
+                                        <div class="price-value-low" itemprop="lowPrice">${racket.pricing.lowestPrice}</div>
                                     </div>
+                                    <div class="price-divider"></div>
                                     <div class="price-item">
                                         <div class="price-label">Precio medio</div>
                                         <div class="current-price">${racket.pricing.averagePrice}</div>
+                                        <div class="price-badge">Referencia</div>
                                     </div>
+                                    <div class="price-divider"></div>
                                     <div class="price-item">
                                         <div class="price-label">Hasta</div>
-                                        <div style="font-size: 1.6em; font-weight: 800;" itemprop="highPrice">${racket.pricing.highestPrice}</div>
+                                        <div class="price-value-high" itemprop="highPrice">${racket.pricing.highestPrice}</div>
                                     </div>
                                 </div>
                                 <meta itemprop="priceCurrency" content="${racket.pricing.currency}">
@@ -2349,22 +2460,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             
                             ${stores.length > 0 ? `
                             <div class="stores-section">
-                                <div class="stores-title">🛒 Compara Precios en:</div>
+                                <div class="stores-title">Compara precios en:</div>
                                 <div class="store-links">
-                                    ${stores.map((store, idx) => `
+                                    ${stores.map((store) => `
                                         <a href="${store.productUrl}" 
                                            target="_blank" 
                                            rel="noopener noreferrer nofollow sponsored" 
                                            class="store-link priority-${store.priority || 3}"
                                            onclick="trackClick('${store.name}', '${racket.name}')">
                                             <div class="store-info">
-                                                <span class="store-name">${store.icon || '🪙'} ${store.name}</span>
-                                                ${store.description ? `<span style="font-size: 0.85em; opacity: 0.8;">${store.description}</span>` : ''}
+                                                <div class="store-icon-wrap">${store.icon || '🛒'}</div>
+                                                <div class="store-text">
+                                                    <span class="store-name">${store.name}</span>
+                                                    ${store.description ? `<span class="store-sub">${store.description}</span>` : ''}
+                                                </div>
                                             </div>
-                                            <span class="store-price">${store.price}</span>
+                                            <div class="store-right">
+                                                <span class="store-price">${store.price}</span>
+                                                <span class="store-cta">Ver oferta ›</span>
+                                            </div>
                                         </a>
                                     `).join('')}
                                 </div>
+                                ${stores[0] ? `
+                                <a href="${stores[0].productUrl}" target="_blank" rel="noopener noreferrer nofollow sponsored"
+                                   class="buy-now-btn" onclick="trackClick('BuyNow', '${racket.name}')">
+                                    🛒 Comprar ahora al mejor precio
+                                </a>` : ''}
                             </div>
                             ` : ''}
                         </div>
@@ -2471,42 +2593,57 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <h4>💰 Dónde Comprar al Mejor Precio</h4>
                         <div class="price-section">
                             <div class="price-header">
+                                <div class="price-header-title">Rango de precios en el mercado</div>
                                 <div class="price-range">
                                     <div class="price-item">
                                         <div class="price-label">Desde</div>
-                                        <div style="font-size: 1.6em; font-weight: 800;" itemprop="lowPrice">${r.pricing.lowestPrice}</div>
+                                        <div class="price-value-low" itemprop="lowPrice">${r.pricing.lowestPrice}</div>
                                     </div>
+                                    <div class="price-divider"></div>
                                     <div class="price-item">
                                         <div class="price-label">Precio medio</div>
                                         <div class="current-price">${r.pricing.averagePrice}</div>
+                                        <div class="price-badge">Referencia</div>
                                     </div>
+                                    <div class="price-divider"></div>
                                     <div class="price-item">
                                         <div class="price-label">Hasta</div>
-                                        <div style="font-size: 1.6em; font-weight: 800;" itemprop="highPrice">${r.pricing.highestPrice}</div>
+                                        <div class="price-value-high" itemprop="highPrice">${r.pricing.highestPrice}</div>
                                     </div>
                                 </div>
                                 <meta itemprop="priceCurrency" content="${r.pricing.currency}">
-                                ${disclaimer ? `<div class="price-disclaimer">ℹ️ ${disclaimer}</div>` : ''}
+                                ${r.pricing.disclaimer ? `<div class="price-disclaimer">ℹ️ ${r.pricing.disclaimer}</div>` : ''}
                             </div>
                             
                             ${stores.length > 0 ? `
                             <div class="stores-section">
-                                <div class="stores-title">🛒 Compara Precios en:</div>
+                                <div class="stores-title">Compara precios en:</div>
                                 <div class="store-links">
-                                    ${stores.map((store, idx) => `
+                                    ${stores.map((store) => `
                                         <a href="${store.productUrl}" 
                                            target="_blank" 
                                            rel="noopener noreferrer nofollow sponsored" 
                                            class="store-link priority-${store.priority || 3}"
                                            onclick="trackClick('${store.name}', '${r.name}')">
                                             <div class="store-info">
-                                                <span class="store-name">${store.icon || '🪙'} ${store.name}</span>
-                                                ${store.description ? `<span style="font-size: 0.85em; opacity: 0.8;">${store.description}</span>` : ''}
+                                                <div class="store-icon-wrap">${store.icon || '🛒'}</div>
+                                                <div class="store-text">
+                                                    <span class="store-name">${store.name}</span>
+                                                    ${store.description ? `<span class="store-sub">${store.description}</span>` : ''}
+                                                </div>
                                             </div>
-                                            <span class="store-price">${store.price}</span>
+                                            <div class="store-right">
+                                                <span class="store-price">${store.price}</span>
+                                                <span class="store-cta">Ver oferta ›</span>
+                                            </div>
                                         </a>
                                     `).join('')}
                                 </div>
+                                ${stores[0] ? `
+                                <a href="${stores[0].productUrl}" target="_blank" rel="noopener noreferrer nofollow sponsored"
+                                   class="buy-now-btn" onclick="trackClick('BuyNow', '${r.name}')">
+                                    🛒 Comprar ahora al mejor precio
+                                </a>` : ''}
                             </div>
                             ` : ''}
                         </div>
