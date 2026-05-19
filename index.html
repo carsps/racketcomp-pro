@@ -497,6 +497,24 @@ tr:hover td { background:rgba(255,255,255,.02); }
   box-shadow:0 3px 12px rgba(249,115,22,.25);
 }
 .slink.amazon:hover { transform:translateY(-2px); box-shadow:0 6px 20px rgba(249,115,22,.42); }
+.slink.elcorteingles {
+  background:linear-gradient(135deg,#006f3c,#00913f);
+  border:none; color:#fff;
+  box-shadow:0 3px 12px rgba(0,111,60,.22);
+}
+.slink.elcorteingles:hover { transform:translateY(-2px); box-shadow:0 6px 20px rgba(0,111,60,.42); }
+.slink.decathlon {
+  background:linear-gradient(135deg,#0082c3,#005f9e);
+  border:none; color:#fff;
+  box-shadow:0 3px 12px rgba(0,130,195,.22);
+}
+.slink.decathlon:hover { transform:translateY(-2px); box-shadow:0 6px 20px rgba(0,130,195,.42); }
+.slink.padelmarket {
+  background:linear-gradient(135deg,#e85d13,#c44d0e);
+  border:none; color:#fff;
+  box-shadow:0 3px 12px rgba(232,93,19,.22);
+}
+.slink.padelmarket:hover { transform:translateY(-2px); box-shadow:0 6px 20px rgba(232,93,19,.42); }
 .slink.amazon::before {
   content:''; position:absolute;
   top:0; left:-80%; width:36%; height:100%;
@@ -963,7 +981,7 @@ footer {
 </div><!-- /wrap -->
 
 <script>
-const API='https://script.google.com/macros/s/AKfycbxXm0lnnQEdylEkk3iQwIYOj2kTELuJu1v2s_Bnpg7sMazYFPUjQiMj7578xC_ISlzbRw/exec';
+const API='https://script.google.com/macros/s/AKfycbz5taorb9hRtLdzgW6ETwBXMfZQ0Go_kvYPJ18VzIQd1jhWllGubPgPAWy1sqevLBzs/exec';
 const userLang=navigator.language||navigator.userLanguage;
 const langCode=userLang.split('-')[0];
 
@@ -1263,13 +1281,21 @@ function buildPriceBlock(pricing,name){
   const stores=(pricing.retailers||[]).slice().sort((a,b)=>(a.priority||999)-(b.priority||999));
   const disc=pricing.disclaimer||'';
   const sLinks=stores.map(s=>{
+    const stype=s.type||'';
     const isAz=s.name&&s.name.toLowerCase().includes('amazon');
-    const cls=isAz?'amazon':'google';
-    const icon=isAz?'📦':'🔍';
-    const sub=isAz?'Envío Prime rápido':'Comparar precios';
-    const safeName=(s.name||'').replace(/'/g,"\\'");
+    const isEci=stype==='elcorteingles';
+    const isDec=stype==='decathlon';
+    const isPM=stype==='padelmarket';
+    let cls='google';
+    if(isAz)cls='amazon';
+    else if(isEci)cls='elcorteingles';
+    else if(isDec)cls='decathlon';
+    else if(isPM)cls='padelmarket';
+    const icon=s.icon||(isAz?'📦':'🔍');
+    const sub=s.description||(isAz?'Envío Prime rápido':'Comparar precios');
+    const safeName=(s.name||'').replace(/'/g,"\'");
     const safeProd=s.productUrl||'#';
-    return`<a href="${safeProd}" target="_blank" rel="noopener noreferrer nofollow sponsored" class="slink ${cls}" onclick="trackClick('${safeName}','${name.replace(/'/g,"\\'")}')">
+    return`<a href="${safeProd}" target="_blank" rel="noopener noreferrer nofollow sponsored" class="slink ${cls}" onclick="trackClick('${safeName}','${name.replace(/'/g,"\'")}')">
       <div class="sl-left"><div class="sl-icon">${icon}</div><div class="sl-info"><span class="sl-name">${s.name}</span><span class="sl-sub">${sub}</span></div></div>
       <div class="sl-right"><span class="sl-price">${s.price}</span><span class="sl-cta">Ver oferta ›</span></div>
     </a>`;
